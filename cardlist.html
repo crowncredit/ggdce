@@ -13,57 +13,15 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="canonical" href="#">
     <link href="index_files/index-css-replace.css">
+    <script src="./index_files/jquery-3.3.1.js"></script>
+    <script src="./js/data.js"></script>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 </head>
 <body style="font-size: 12px;">
 <script src = "./cardlist_files/flexible.js" > </script>
 <div id="login-toast"></div>
 <link rel="stylesheet" href="./index_files/mapp.b2694532.css">
-<!--<div id="cambrian0" style="height: 65px;">-->
-    <!--<div class="_2agQN7">-->
-        <!--<div class="_15GsC0">-->
-            <!--&lt;!&ndash;<div class="_3tOSKX _3-matf" style="top: 0px;">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="_1XQ-iI">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="_1lAJB1">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<div class="_1ke4J- undefined">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div class="_25ZfXD ">查看</div>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<div class="_8zSUTn">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div class="_14jbvD"><img&ndash;&gt;-->
-                                    <!--&lt;!&ndash;src="./cardlist_files/1445XX2c4fb711f9c0de17f1322c82e4_1534160104539.jpeg"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;class="_1JSyq3"></div>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div class="_2UGABC">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<div class="_1X-0oQ">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<div class="_27t1FH">XX信用卡</div>&ndash;&gt;-->
-                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                                <!--&lt;!&ndash;<div class="_3AE6SS">让有信用的人过得更好</div>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--<div class="_2fGLIX" style="opacity: 0;">-->
-                <!--<div class="_1lAJB1">-->
-                    <!--&lt;!&ndash;<div class="_1ke4J- undefined">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<div class="_25ZfXD ">查看</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="_8zSUTn">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<div class="_14jbvD"><img&ndash;&gt;-->
-                                <!--&lt;!&ndash;src="./cardlist_files/1445XX2c4fb711f9c0de17f1322c82e4_1534160104539.jpeg"&ndash;&gt;-->
-                                <!--&lt;!&ndash;class="_1JSyq3"></div>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<div class="_2UGABC">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div class="_1X-0oQ">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<div class="_27t1FH">XX信用卡</div>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div class="_3AE6SS">让有信用的人过得更好</div>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-<script>cambrian.render('head')</script>
+
 <div id="mobile_app" class="m-card-center-page">
     <header class="m-layout-header"><a class="left-back" href="index.html"><img
             src="./cardlist_files/304f4d9ef3af484aaffe009f616be342.png" class="icon"></a>
@@ -73,21 +31,21 @@
     <div class="main">
         <div class="tabs-select">
             <ul role="tablist" class="tabs-select-navs">
-                <li role="presentation" class="tabs-select-nav">
-                    <div><span>银行</span></div>
+                <li role="presentation" class="tabs-select-nav" id="bank">
+                    <div><span>Bank</span></div>
                 </li>
-                <li role="presentation" class="tabs-select-nav">
-                    <div><span>权益</span></div>
+                <li role="presentation" class="tabs-select-nav" id="segmen">
+                    <div><span>Segmen</span></div>
                 </li>
-                <li role="presentation" class="tabs-select-nav">
-                    <div><span>等级</span></div>
+                <li role="presentation" class="tabs-select-nav" id="Ting">
+                    <div><span>Tingkatan</span></div>
                 </li>
-                <li role="presentation" class="tabs-select-nav">
-                    <div><span>更多</span></div>
+                <li role="presentation" class="tabs-select-nav" id="filter">
+                    <div><span>Filter</span></div>
                 </li>
             </ul>
             <div class="tabs-select-panels">
-                <section role="tabpanel" class="tabs-select-panel hide">
+                <section role="tabpanel" class="tabs-select-panel hide" id="bank-sel">
                     <ul class="ul">
                         <li class="li"><label class="label"> 全部银行</label></li>
                         <li class="li"><label class="label"> 中国银行</label></li>
@@ -154,7 +112,7 @@
                         <li class="li"><label class="label"> 江苏农信</label></li>
                     </ul>
                 </section>
-                <section role="tabpanel" class="tabs-select-panel hide">
+                <section role="tabpanel" class="tabs-select-panel hide" id="qy-sel">
                     <ul class="ul">
                         <li class="li"><label class="label"> 全部权益</label></li>
                         <li class="li"><label class="label"> 酒店</label></li>
@@ -167,7 +125,7 @@
                         <li class="li"><label class="label"> 境外</label></li>
                     </ul>
                 </section>
-                <section role="tabpanel" class="tabs-select-panel hide">
+                <section role="tabpanel" class="tabs-select-panel hide" id="level-sel">
                     <ul class="ul">
                         <li class="li"><label class="label"> 全部等级</label></li>
                         <li class="li"><label class="label"> 普卡</label></li>
@@ -183,7 +141,7 @@
                         <li class="li"><label class="label"> 臻金卡</label></li>
                     </ul>
                 </section>
-                <section role="tabpanel" class="tabs-select-panel hide">
+                <section role="tabpanel" class="tabs-select-panel hide" id="bz-sel">
                     <div class="more-options-content">
                         <div class="more-options-select">
                             <div class="name">币种</div>
@@ -250,277 +208,60 @@
                 </section>
             </div>
         </div>
-        <section class="m-group card-list"><!---->
-            <div class="content">
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/fc02ad1fc1e44b01a6b4c74e21ea1485eda4" alt="中信“颜”系列信用卡（金卡）"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        中信“颜”系列信用卡（金卡）</h1></a>
-                        <ul class="sub-infos">
-                            <li>1000元航空延误险</li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="carddetail.html"
-                                                    onclick="">
-                        免费申请
-                    </a></div>
-                </div>
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/572fabbb5f1e4dc8a431f91b3df094b43038" alt="中信i白金信用卡"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        中信i白金信用卡</h1></a>
-                        <ul class="sub-infos">
-                            <li>IMAX五折观影</li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>白金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="#"
-                                                    onclick=" return false; ">
-                        免费申请
-                    </a></div>
-                </div>
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/0a583638573c4c9cadfb6449f905d3c5972d" alt="交通太平洋沃尔玛信用卡金卡"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        交通太平洋沃尔玛信用卡金卡</h1></a>
-                        <ul class="sub-infos">
-                            <li>2.5%刷卡金优惠</li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="#"
-                                                    onclick=" return false; ">
-                        免费申请
-                    </a></div>
-                </div>
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/610a5719f0bc44b3be641b95a9bc6cbe333f" alt="平安车主卡银联金卡"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        平安车主卡银联金卡</h1></a>
-                        <ul class="sub-infos">
-                            <li>110万元全车人员保障</li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="#"
-                                                    onclick=" return false; ">
-                        免费申请
-                    </a></div>
-                </div>
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/fce783756eef4015b7257f19311add6c4b01" alt="平安中国旅游卡白金卡"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        平安中国旅游卡白金卡</h1></a>
-                        <ul class="sub-infos">
-                            <li>全车人员意外险</li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>白金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="#"
-                                                    onclick=" return false; ">
-                        免费申请
-                    </a></div>
-                </div>
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/825c841fe8f244ed8530dba4f2c11f24cedc" alt="广发DIY信用卡金卡"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        广发DIY信用卡金卡</h1></a>
-                        <ul class="sub-infos">
-                            <li></li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="#"
-                                                    onclick=" return false; ">
-                        免费申请
-                    </a></div>
-                </div>
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/b0523e4806d24a869554cbd8e5977b52de27" alt="广发臻尚白金信用卡银联"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        广发臻尚白金信用卡银联</h1></a>
-                        <ul class="sub-infos">
-                            <li>全球优惠商户</li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>白金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="#"
-                                                    onclick=" return false; ">
-                        免费申请
-                    </a></div>
-                </div>
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/081c87973b1d49368c27b76416fXXfe4e9bb" alt="招商YOUNG卡（黑色青年版）"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        招商YOUNG卡（黑色青年版）</h1></a>
-                        <ul class="sub-infos">
-                            <li>开卡送好礼</li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="#"
-                                                    onclick=" return false; ">
-                        免费申请
-                    </a></div>
-                </div>
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/7ff2f0f866ac4508b0a089382bf7112754f5" alt="浦发白金卡简约版"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        浦发白金卡简约版</h1></a>
-                        <ul class="sub-infos">
-                            <li>餐饮购物尊客体验</li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>VISA</li>
-                            <li>白金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="#"
-                                                    onclick=" return false; ">
-                        免费申请
-                    </a></div>
-                </div>
-                <div class="m-card-item">
-                    <div class="left"><a href="#"><img
-                            src="./cardlist_files/b71e74faaf5f4567be7ddd507b0defc3ff55" alt="花旗花旗礼享卡银联卡"></a></div>
-                    <div class="center"><a href="#"><h1 class="title">
-                        花旗花旗礼享卡银联卡</h1></a>
-                        <ul class="sub-infos">
-                            <li>72小时失卡保障</li>
-                        </ul>
-                        <ul class="tags">
-                            <li>银联</li>
-                            <li>白金卡</li>
-                        </ul>
-                    </div>
-                    <div class="right highlight"><a href="#"
-                                                    onclick=" return false; ">
-                        免费申请
-                    </a></div>
-                </div> <!---->
-                <div class="get-more">点击展开更多<img src="./cardlist_files/6e4352dd547349e0b513a8f4167f5278.png"></div>
+        <section class="m-group card-list">
+            <div class="content" id="card-list">
+                
             </div>
-        </section>
-        <section class="m-group rmyh">
-            <div class="m-group-title"><h2>热门银行</h2>
-                <div class="more"><!----></div>
-            </div>
-            <div class="content">
-                <div class="m-hot-banks">
-                    <ul>
-                        <li><a href="#"><img
-                                src="./cardlist_files/zx-2x-w-v2-11-2.png" alt="中信银行">
-                            <p>中信银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/gf-2x-w-v2-2-2.png"
-                                                                             alt="广发银行">
-                            <p>广发银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/pf-w-v2-8-2.png"
-                                                                              alt="浦发银行">
-                            <p>浦发银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/gd-2x-w-v2-3-2.png"
-                                                                             alt="光大银行">
-                            <p>光大银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/jt-2x-w-v2-13-2.png"
-                                                                             alt="交通银行">
-                            <p>交通银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/ny-2x-w-v2-7-2.png"
-                                                                             alt="农业银行">
-                            <p>农业银行</p></a></li>
-                        <li><a href="#"><img
-                                src="./cardlist_files/bhbank-2x-w-v2-92.png" alt="渤海银行">
-                            <p>渤海银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/xy-2x-w-v2-9-2.png"
-                                                                             alt="兴业银行">
-                            <p>兴业银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/pa-2x-w-v2-15-2.png"
-                                                                             alt="平安银行">
-                            <p>平安银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/hx-2x-w-v2-4-2.png"
-                                                                             alt="华夏银行">
-                            <p>华夏银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/js-2x-w-v2-5-2.png"
-                                                                             alt="建设银行">
-                            <p>建设银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/zg-2x-w-v2-10-2.png"
-                                                                             alt="中国银行">
-                            <p>中国银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/zs-2x-w-v2-1-2.png"
-                                                                             alt="招商银行">
-                            <p>招商银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/zjmtcb-c-135.png"
-                                                                             alt="民泰银行">
-                            <p>民泰银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/bj-2x-w-v2-18-2.png"
-                                                                             alt="北京银行">
-                            <p>北京银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/sh-2x-w-v2-33-2.png"
-                                                                              alt="上海银行">
-                            <p>上海银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/wz-2x-w-v2-23-2.png"
-                                                                              alt="温州银行">
-                            <p>温州银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/ms-2x-w-v2-6-2.png"
-                                                                              alt="民生银行">
-                            <p>民生银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/gs-2x-w-v2-12-2.png"
-                                                                              alt="工商银行">
-                            <p>工商银行</p></a></li>
-                        <li><a href="#"><img src="./cardlist_files/yc-2x-w-v2-14-2.png"
-                                                                              alt="邮储银行">
-                            <p>邮储银行</p></a></li>
-                    </ul>
-                    <div class="more"><span>展开更多<img src="./cardlist_files/6e4352dd547349e0b513a8f4167f5278.png"></span>
+            <div class="get-more">点击展开更多<img src="./cardlist_files/6e4352dd547349e0b513a8f4167f5278.png"></div>
+            <section class="m-group rmyh">
+                    <div class="m-group-title"><h2>Bank Penerbit</h2>
+                        <div class="more"><!----></div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="m-group"><!---->
+                    <div class="content">
+                        <div class="m-hot-banks">
+                            <ul>
+                                <li><a href="#"><img src="./img/bank01.png" alt="Bank BRI">
+                                    <p>Bank BRI</p></a>
+                                </li>
+                                <li><a href="#"><img src="./img/bank01.png" alt="Bank BRI">
+                                    <p>Bank BRI</p></a>
+                                </li>
+                                <li><a href="#"><img src="./img/bank01.png" alt="Bank BRI">
+                                    <p>Bank BRI</p></a>
+                                </li>
+                                <li><a href="#"><img src="./img/bank01.png" alt="Bank BRI">
+                                    <p>Bank BRI</p></a>
+                                </li>
+                                <li><a href="#"><img src="./img/bank01.png" alt="Bank BRI">
+                                    <p>Bank BRI</p></a>
+                                </li>
+                                <li><a href="#"><img src="./img/bank01.png" alt="Bank BRI">
+                                    <p>Bank BRI</p></a>
+                                </li>
+                                <li><a href="#"><img src="./img/bank01.png" alt="Bank BRI">
+                                    <p>Bank BRI</p></a>
+                                </li>
+                                <li><a href="#"><img src="./img/bank01.png" alt="Bank BRI">
+                                    <p>Bank BRI</p></a>
+                                </li>
+                            </ul>
+                            <div class="more"><span>Tampi Lkan Semua<img src="./index_files/6e4352dd547349e0b513a8f4167f5278.png"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        <!-- <section class="m-group">
             <div class="content">
                 <div class="m-best-theme">
-                    <section><!---->
-                        <div class="right"><!----> <!----></div>
+                    <section>
+                        <div class="right"></div>
                     </section>
-                    <section><!---->
-                        <div class="right"><!----> <!----></div>
+                    <section>
+                        <div class="right"></div>
                     </section>
                 </div>
             </div>
-        </section>
+        </section> -->
         <div class="m-breadcrumb"><label>位置：</label>
             <ul>
                 <li><a href="#">首页</a></li>
@@ -601,5 +342,42 @@
     </div>
 </div>
 <div id="userdata_el" style="visibility: hidden; position: absolute;"></div>
+<script>
+    window.onload = function(){
+        // console.log($(".card-list .content"));
+        loadCard("推荐");
+}
+</script>
+<script>
+    //  $("#bank-sel").on("blur", function(){
+    //      console.log('aa');
+    //  })
+     $("#bank-sel").blur(function(){
+        console.log("blur")
+        $(".tabs-select-panel").attr("class", "tabs-select-panel hide");
+    })
+</script>
+<script>
+    var dis_pannel = function(triger, panel){
+        triger.click(function(){
+        // var panel = $("#bank-sel");
+        if(panel.attr("class") === "tabs-select-panel active"){
+            panel.attr("class", "tabs-select-panel hide");
+        }else{
+            panel.attr("class", "tabs-select-panel active");
+        }
+    });
+    // panel.blur(function(){
+    //         console.log("aa")
+    //         panel.attr("class", "tabs-select-panel hide");
+    //     });
+    }
+    dis_pannel($("#bank"),$("#bank-sel"))
+    dis_pannel($("#segmen"),$("#qy-sel"))
+    dis_pannel($("#Ting"),$("#level-sel"))
+    dis_pannel($("#filter"),$("#bz-sel"))
+   
+
+</script>
 </body>
 </html>

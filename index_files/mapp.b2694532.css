@@ -486,9 +486,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .m-layout-header .icon {
-    width: .64rem;
+    /* width: .64rem; */
     margin: 0 .426667rem;
-    height: .64rem
+    height: .55rem
 }
 
 .m-layout-header .left-back, .m-layout-header .menu-right {
@@ -705,8 +705,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .h-sidebar-top img {
-    width: 2.4rem;
-    height: .48rem
+    width: 3.5rem;
+    /* height: .48rem */
 }
 
 .h-sidebar section {
@@ -1781,7 +1781,8 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #999;
     -webkit-border-radius: .053333rem;
     border-radius: .053333rem;
-    width: 1.013333rem;
+    /* width: 1.013333rem; */
+    padding: 0 .1rem 0 .1rem;
     height: .426667rem;
     color: #999;
     margin-right: .213333rem;
@@ -3958,7 +3959,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .m-card-home-page .wkui-swiper {
-    padding: .346667rem 0 .96rem;
+    padding: 0rem 0 .70rem;
     position: relative;
     background: #fff
 }
