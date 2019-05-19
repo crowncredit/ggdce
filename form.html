@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" data-server-rendered="true" class="m-card-center-page" style="font-size: 36px;">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139185691-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139185691-1');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>FORM</title>
+    <meta name="keywords" content="">
+    <meta name="description"
+          content="">
+    <meta http-equiv="”Cache-Control”" content="”no-transform”">
+    <meta http-equiv="”Cache-Control”" content="”no-siteapp”">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="#">
+    <link rel="stylesheet" href="index_files/index-css-replace.css">
+    <script src="./index_files/jquery-3.3.1.js"></script>
+    <script src="./js/data.js"></script>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+</head>
+<body style="font-size: 12px;">
+<script src = "./cardlist_files/flexible.js" > </script>
+<div id="login-toast"></div>
+<link rel="stylesheet" href="./index_files/mapp.b2694532.css">
+
+<div id="mobile_app" class="m-card-center-page">
+    <header class="m-layout-header"><a class="left-back" href="" onclick="javascript:history.back(-1); return false;"><img
+            src="./cardlist_files/304f4d9ef3af484aaffe009f616be342.png" class="icon"></a>
+        <div class="title">Form</div>
+        <div class="menu-right"><img src="" class="icon"></div>
+    </header>
+    <div class="main" style="padding-top:0.9rem;">
+              <section class="m-group article-detail" style="padding-top:.64rem;padding-bottom: .64rem">
+                <div class="content" style="text-align:center;">
+                    <!-- <iframe src="https://form.maukredit.co.id/ajukan-kartu-kreditmu-sekarang/" width="320" height="2100" frameborder="0" marginheight="0" marginwidth="0" id="testFrame">正在加载...</iframe> -->
+                </div>
+              </section>
+
+              <!-- <div class="component-most-popular-cards mt12">
+                </div>
+                <section class="m-group card-list">
+                        <div class="m-group-title"><h2>Produk Pilihan</h2>
+                            <div class="more"></div>
+                        </div>
+                    <div class="content" id="card-list">
+                    </div>
+                </section>
+            </div>
+    </div>
+            
+            <section class="m-group rmyh">
+                    <div class="m-group-title"><h2>Bank Penerbit</h2>
+                        <div class="more"></div>
+                    </div>
+                    <div class="content" style="padding-bottom:1rem">
+                        <div class="m-hot-banks">
+                            <ul>
+                                <li><a href="cardlist.html"><img src="./img/bank01.png" alt="Bank BRI">
+                                    <p>Bank BRI</p></a>
+                                </li>
+                                <li><a href="cardlist.html"><img src="./img/bni.png" alt="BNI">
+                                    <p>BNI</p></a>
+                                </li>
+                                <li><a href="cardlist.html"><img src="./img/CIMB Niaga.png" alt="CIMB Niaga">
+                                    <p>CIMB Niaga</p></a>
+                                </li>
+                                <li><a href="cardlist.html"><img src="./img/DBS Bank.png" alt="DBS Bank">
+                                    <p>DBS Bank</p></a>
+                                </li>
+                                <li><a href="cardlist.html"><img src="./img/Mandir.png" alt="Mandiri">
+                                    <p>Mandiri</p></a>
+                                </li>
+                                <li><a href="cardlist.html"><img src="./img/Maybank.jpg" alt="Maybank">
+                                    <p>Maybank</p></a>
+                                </li>
+                                <li><a href="cardlist.html"><img src="./img/OCBC NISP.png" alt="OCBC NISP">
+                                    <p>OCBC NISP</p></a>
+                                </li>
+                                <li><a href="cardlist.html"><img src="./img/UOB.png" alt="UOB">
+                                    <p>UOB</p></a>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    </div>
+    <footer class="m-layout-footer">
+            <div class="copyright"><p>Copyright©2019 maukredit lnc. All Rights Reserved.</p>
+        </footer>
+    </div> -->
+</div>
+<div id="userdata_el" style="visibility: hidden; position: absolute;"></div>
+<script>
+    window.onload = function(){
+        loadCard("Rekomendasi");
+}
+    iframe = document.createElement("iframe");
+    iframe.src = "https://form.maukredit.co.id/ajukan-kartu-kreditmu-sekarang/";
+    iframe.name = "form"
+    iframe.onload = function(){
+        console.log(iframe)
+    }
+    document.body.appendChild(iframe);
+    
+</script>
+<script>
+    //  $("#bank-sel").on("blur", function(){
+    //      console.log('aa');
+    //  })
+     $("#bank-sel").blur(function(){
+        console.log("blur")
+        $(".tabs-select-panel").attr("class", "tabs-select-panel hide");
+    })
+</script>
+<script>
+    var dis_pannel = function(triger, panel){
+        triger.click(function(){
+        // var panel = $("#bank-sel");
+        if(panel.attr("class") === "tabs-select-panel active"){
+            panel.attr("class", "tabs-select-panel hide");
+        }else{
+            panel.attr("class", "tabs-select-panel active");
+        }
+    });
+    // panel.blur(function(){
+    //         console.log("aa")
+    //         panel.attr("class", "tabs-select-panel hide");
+    //     });
+    }
+    dis_pannel($("#bank"),$("#bank-sel"))
+    dis_pannel($("#segmen"),$("#qy-sel"))
+    dis_pannel($("#Ting"),$("#level-sel"))
+    dis_pannel($("#filter"),$("#bz-sel"))
+   
+
+</script>
+</body>
+</html>

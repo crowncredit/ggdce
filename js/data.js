@@ -1,43 +1,52 @@
 var cardDataList = new Array({
-    'url' : '',
+    'url' : './form.html',
     'card_img': './img/01.png',
-    'title' : 'Wave n Go',
-    'tag' : 'Visa',
-    'bank': 'CIMB Niaga',
+    'title' : 'Ndigo',
+    'tag' : 'MasterCard',
+    'limit' : 'Annual Fee GRATIS',
+    'bank': 'BEIJING',
     'level' : 'Gold',
-    'detail' : './carddetail.html'
+    'detail' : './carddetail01.html',
 },
 {
-    'url' : '',
+    'url' : './form.html',
     'card_img': './img/02.png',
-    'title' : 'White Card',
-    'tag' : 'Master',
-    'bank': 'Maybank',
-    'level' : 'Platinum'
+    'title' : 'Capital One',
+    'tag' : 'MasterCard',
+    'limit' : 'Annual Fee GRATIS',
+    'bank': 'GUANGDA',
+    'level' : 'Platinum',
+    'detail' : './carddetail02.html',
 },
 {
-    'url' : '',
+    'url' : './form.html',
     'card_img': './img/03.png',
-    'title' : 'Style',
-    'tag' : 'Master',
-    'bank': 'BNI',
-    'level' : 'Titanium'
+    'title' : 'Catital',
+    'tag' : 'MasterCard',
+    'limit' : 'Annual Fee GRATIS',
+    'bank': 'ICBC',
+    'level' : 'Titanium',
+    'detail' : './carddetail03.html'
 },
 {
-    'url' : '',
+    'url' : './form.html',
     'card_img': './img/04.png',
-    'title' : 'Easy Card',
-    'tag' : 'Master',
-    'bank': 'BRI',
-    'level' : 'Gold'
+    'title' : 'Freedom',
+    'tag' : 'VISA',
+    'limit' : 'Annual Fee Rp 250rb',
+    'bank': 'MINTAI',
+    'level' : 'Gold',
+    'detail' : './carddetail04.html'
 },
 {
-    'url' : '',
+    'url' : './form.html',
     'card_img': './img/05.png',
-    'title' : 'Skyz Card',
-    'tag' : 'Master',
-    'bank': 'Mandiri',
-    'level' : 'Titanium'
+    'title' : 'OneZi',
+    'limit' : 'Annual Fee Rp 300rb',
+    'tag' : 'VISA',
+    'bank': 'PUFA',
+    'level' : 'Titanium',
+    'detail' : './carddetail05.html'
 },
 // {
 //     'url' : '',
@@ -67,32 +76,32 @@ var cardDataList = new Array({
 
 var htmlGenerate = function(e){
     return "<div class='m-card-item'>\
-    <div class='left'><a href='"+ e.url + "'>\
+    <div class='left'><a href='"+ e.detail + "'>\
         <img src='"+e.card_img+"' alt='"+e.title+"'></a></div>\
-    <div class='center'><a href='"+e.url+"'><h1 class='title'>"+e.title+"</h1></a>\
+    <div class='center'><a href='"+e.detail+"'><h1 class='title'>"+e.title+"</h1></a>\
         <ul class='sub-infos'>\
-            <li></li>\
+            <li>"+e.bank+"</li>\
         </ul>\
         <ul class='tags'>\
-            <li>"+e.bank+"</li>\
-            <li>"+e.tag+"</li>\
+            <li>"+e.limit+"</li>\
         </ul>\
     </div>\
     <div class='right highlight'>\
-        <a href='"+e.detail+"' onclick=' '>免费申请</a>\
+        <a href='"+e.detail+"' onclick=' '>Info Detail</a>\
     </div>\
 </div>"
 }
 
 var loadCard = function(bank){
+    console.log(bank)
     $("#card-list").empty();
     for (i in cardDataList){
-        // console.log(i);
-        // console.log(bank);
-    if(bank === "推荐"){
+    if(bank === "Rekomendasi"){
+        console.log("")
         $("#card-list").append(htmlGenerate(cardDataList[i]));
     }
     if(cardDataList[i].bank === bank){
+        console.log(bank +"nice")
         $("#card-list").append(htmlGenerate(cardDataList[i]));}
     }
 }

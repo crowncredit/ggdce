@@ -1676,7 +1676,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .m-card-center-page .more-options-select ul li:nth-child(3n) {
-    margin-right: 0
+    /* margin-right: 0 */
 }
 
 .m-card-item {
@@ -1821,7 +1821,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .m-card-item .right a {
     display: block;
-    width: 1.706667rem;
+    width: 1.8rem;
     border: 1px solid #ffa000;
     -webkit-border-radius: .106667rem;
     border-radius: .106667rem;
@@ -4096,7 +4096,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-flex: 25%;
     -webkit-flex: 25% 0 0;
     -ms-flex: 25% 0 0px;
-    flex: 25% 0 0;
+    flex: 33.333% 0 0;
     text-align: center
 }
 
