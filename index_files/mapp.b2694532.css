@@ -4096,7 +4096,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-flex: 25%;
     -webkit-flex: 25% 0 0;
     -ms-flex: 25% 0 0px;
-    flex: 33.333% 0 0;
+    flex: 25% 0 0;
     text-align: center
 }
 
